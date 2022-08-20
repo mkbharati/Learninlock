@@ -1,0 +1,41 @@
+extends base.pug
+
+block scripts 
+    script(src='/static/index.js')
+    script(src='../static/class10index.js')
+block style 
+    style 
+        include ../static/style.css
+        include ../static/class12style.css
+block content 
+    div.container 
+        h1 Ncert Textbooks
+    
+    div.container 
+        h1 Post your questions 
+        form(action="/class12" , method="POST" , class="form1" ,role = "form", enctype="multipart/form-data")
+            <input type="text" class= "myInput" name="name" placeholder="Enter your name.."> 
+            <input type="email" class="myInput" name="email"  placeholder="Enter your email..">
+            textarea(name="ques", cols="30",  rows="10" , placeholder="Type your question here")
+            input(type="file", name="image", class="file")
+            <input type="submit" class="btn" value = "Post your Question">
+            
+    div.container
+        h1 Know your Solution
+        div.engine
+                input(type="text", id = "searchinput" ,placeholder="Search" , onkeyup = "searchFun()")
+                table#mytable 
+                    tr
+                        td bse311
+                        td
+                            a(href="../static/bse311.jpg") Click here to know 
+                    tr
+                        td ta201 
+                        td 
+                            a(href="../static/ta202.jpg") Click here to know
+                    tr 
+                        td 
+                    tr 
+                        td dsa 
+                        td 
+                            a(href="../static/hint.jpg") Click here to know

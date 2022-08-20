@@ -1,0 +1,29 @@
+extends base.pug
+
+block scripts 
+    script(src='../static/index.js')
+block style 
+    style 
+        include ../static/style.css
+        include ../static/stylehome.css
+block content 
+    section#intro 
+        div Welcome to LearnInLock
+        div.small Eat Sleep Learn Repeat
+    section#ourservice 
+        h2 Our services
+        div.card 
+            h4 Post Your Question
+            p Write your question or upload image of your question of Physics, Chemistry and Maths. 
+            button.btn Post
+        div.card 
+            h4 Know Your Solution 
+            p Know your solution within one days and give feedback to our solution and keep posting.
+            button.btn Know 
+        div.card
+            h4 Related Videos
+            p Watch the related videos of your solution for better understanding of solution.
+            button.btn Watch
+    section#supoortus 
+        h2 Support Us 
+        

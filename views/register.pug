@@ -1,0 +1,27 @@
+doctype html
+html 
+    head 
+        title LearnInLock 
+        style 
+            include ../static/registerstyle.css
+         
+    body 
+        section#intro 
+            div Welcome to LearnInLock
+            div.small Eat Sleep Learn Repeat
+        section#register
+            div#border
+                div#log
+                    h2 #[a(href="/") Login]
+                    h2 #[a(href="/register") Register]
+                form(action= "/register", method= "post", class= "myForm")
+                    <input type="text"class= "name" name="name" placeholder="Enter your name..">
+                    <input type="phone" class= "myInput" name="phone" placeholder="Enter your Mobile no.">
+                    <input type="email" class= "myInput" name="email" placeholder="Enter your email..">
+                    <input type="password" class="name" name= "password" placeholder="Enter your password">
+                    <input type="password" class="name" name= "cpassword" placeholder="Confirm your password">
+                    <input type="submit" class="btnRegister" value = "Register">
+                    
+        footer#footer 
+                | Copyright © 2021 LearnInLock.com | All rights reserved
+    

@@ -1,0 +1,168 @@
+extends base.pug
+
+block scripts 
+    script(src='/static/index.js')
+    script(src='../static/class10index.js')
+block style 
+    style 
+        include ../static/style.css
+        include ../static/class10style.css
+block content 
+    //- div.container 
+        h1 Ncert TextBooks
+        table#sel 
+            tbody 
+                tr 
+                    td 
+                        form(action="" class="form" name="test")
+                            select(name="subject" id = "sub" ) 
+                                option(value="-1 ") Select Subject.. 
+                                option(value="science") Science
+                                option(value="math") Math
+                            select(name="language" id = "lang" ) 
+                                option(value="-1") Select Language.. 
+                                option(value="hindi") Hindi 
+                                option(value="english") English
+                            <button class="btnlog" type = "text" onclick = "SearchFun()">Go</button>
+    
+    div.container 
+        h1 Ncert Textbooks
+    div#content1                         
+        table.con 
+            tbody 
+                tr.row
+                    td.chp
+                        h2 Science(English) 
+                        a(href="../static/science10/chapter1.pdf") Chapter 1
+                        a(href="../static/science10/chapter2.pdf") Chapter 2
+                        a(href="../static/science10/chapter3.pdf") Chapter 3
+                        a(href="../static/science10/chapter4.pdf") Chapter 4
+                        a(href="../static/science10/chapter5.pdf") Chapter 5
+                        a(href="../static/science10/chapter6.pdf") Chapter 6
+                        a(href="../static/science10/chapter7.pdf") Chapter 7
+                        a(href="../static/science10/chapter8.pdf") Chapter 8
+                        a(href="../static/science10/chapter9.pdf") Chapter 9
+                        a(href="../static/science10/chapter10.pdf") Chapter 10
+                        a(href="../static/science10/chapter11.pdf") Chapter 11
+                        a(href="../static/science10/chapter12.pdf") Chapter 12
+                        a(href="../static/science10/chapter13.pdf") Chapter 13
+                        a(href="../static/science10/chapter14.pdf") Chapter 14
+                        a(href="../static/science10/chapter15.pdf") Chapter 15
+                        a(href="../static/science10/chapter16.pdf") Chapter 16
+                    td.pic
+                        img(src="/static/science10/pic.jpg", alt="")
+    div#content2                       
+        table.con 
+            tbody 
+                tr.row
+                    td.chp
+                        h2 Science(Hindi) 
+                        a(href="../static/vigyan10/Chapter1.pdf") Chapter 1
+                        a(href="../static/vigyan10/Chapter2.pdf") Chapter 2
+                        a(href="../static/vigyan10/Chapter3.pdf") Chapter 3
+                        a(href="../static/vigyan10/Chapter4.pdf") Chapter 4
+                        a(href="../static/vigyan10/Chapter5.pdf") Chapter 5
+                        a(href="../static/vigyan10/Chapter6.pdf") Chapter 6
+                        a(href="../static/vigyan10/Chapter7.pdf") Chapter 7
+                        a(href="../static/vigyan10/Chapter8.pdf") Chapter 8
+                        a(href="../static/vigyan10/Chapter9.pdf") Chapter 9
+                        a(href="../static/vigyan10/Chapter10.pdf") Chapter 10
+                        a(href="../static/vigyan10/Chapter11.pdf") Chapter 11
+                        a(href="../static/vigyan10/Chapter12.pdf") Chapter 12
+                        a(href="../static/vigyan10/Chapter13.pdf") Chapter 13
+                        a(href="../static/vigyan10/Chapter14.pdf") Chapter 14
+                        a(href="../static/vigyan10/Chapter15.pdf") Chapter 15
+                        a(href="../static/vigyan10/Chapter16.pdf") Chapter 16
+                    td.pic
+                        img(src="/static/vigyan10/pic3.jpg", alt="")
+    div#content3                        
+        table.con 
+            tbody 
+                tr.row
+                    td.chp
+                        h2 Maths(English) 
+                        a(href="../static/maths10/Chapter1.pdf") Chapter 1
+                        a(href="../static/maths10/Chapter2.pdf") Chapter 2
+                        a(href="../static/maths10/Chapter3.pdf") Chapter 3
+                        a(href="../static/maths10/Chapter4.pdf") Chapter 4
+                        a(href="../static/maths10/Chapter5.pdf") Chapter 5
+                        a(href="../static/maths10/Chapter6.pdf") Chapter 6
+                        a(href="../static/maths10/Chapter7.pdf") Chapter 7
+                        a(href="../static/maths10/Chapter8.pdf") Chapter 8
+                        a(href="../static/maths10/Chapter9.pdf") Chapter 9
+                        a(href="../static/maths10/Chapter10.pdf") Chapter 10
+                        a(href="../static/maths10/Chapter11.pdf") Chapter 11
+                        a(href="../static/maths10/Chapter12.pdf") Chapter 12
+                        a(href="../static/maths10/Chapter13.pdf") Chapter 13
+                        a(href="../static/maths10/Chapter14.pdf") Chapter 14
+                        a(href="../static/maths10/Chapter15.pdf") Chapter 15
+                    td.pic
+                        img(src="/static/maths10/pic2.jpg", alt="")
+    div#content4                        
+        table.con 
+            tbody 
+                tr.row
+                    td.chp
+                        h2 Maths(Hindi) 
+                        a(href="../static/ganit10/Chapter1.pdf") Chapter 1
+                        a(href="../static/ganit10/Chapter2.pdf") Chapter 2
+                        a(href="../static/ganit10/Chapter3.pdf") Chapter 3
+                        a(href="../static/ganit10/Chapter4.pdf") Chapter 4
+                        a(href="../static/ganit10/Chapter5.pdf") Chapter 5
+                        a(href="../static/ganit10/Chapter6.pdf") Chapter 6
+                        a(href="../static/ganit10/Chapter7.pdf") Chapter 7
+                        a(href="../static/ganit10/Chapter8.pdf") Chapter 8
+                        a(href="../static/ganit10/Chapter9.pdf") Chapter 9
+                        a(href="../static/ganit10/Chapter10.pdf") Chapter 10
+                        a(href="../static/ganit10/Chapter11.pdf") Chapter 11
+                        a(href="../static/ganit10/Chapter12.pdf") Chapter 12
+                        a(href="../static/ganit10/Chapter13.pdf") Chapter 13
+                        a(href="../static/ganit10/Chapter14.pdf") Chapter 14
+                        a(href="../static/ganit10/Chapter15.pdf") Chapter 15
+                    td.pic
+                        img(src="/static/ganit10/pic1.jpg", alt="")
+    
+    div.container 
+        h1 Post your questions 
+        form(action="/class10" , method="POST" , class="form1" ,role = "form", enctype="multipart/form-data")
+            <input type="text" class= "myInput" name="name" placeholder="Enter your name.."> 
+            <input type="email" class="myInput" name="email"  placeholder="Enter your email..">
+            textarea(name="ques", cols="30",  rows="10" , placeholder="Type your question here")
+            input(type="file", name="image", class="file")
+            <input type="submit" class="btn" value = "Post your Question">
+    
+    div.container
+        table 
+            thead 
+                tr 
+                    th Name
+                    th Email
+                    th Ques
+                    th Mobile no.
+            
+            
+    div.container
+        h1 Know your Solution
+        div.engine
+                input(type="text", id = "searchinput" ,placeholder="Search" , onkeyup = "searchFun()")
+                table#mytable 
+                    tr
+                        td bse311
+                        td
+                            a(href="../static/bse311.jpg") Click here to know 
+                    tr
+                        td ta201 
+                        td 
+                            a(href="../static/ta202.jpg") Click here to know
+                    tr 
+                        td 
+                    tr 
+                        td dsa 
+                        td 
+                            a(href="../static/hint.jpg") Click here to know   
+
+
+            
+
+
+

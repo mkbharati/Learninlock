@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+#intro::before{
+    content: "";
+    background: url('../static/bgimg.jpg') no-repeat center center/cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height:65%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+#intro{
+    
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-family: 'Architects Daughter', cursive;
+    color: rgb(89, 38, 122);
+    font-weight: 800;
+}
+#ourservice{
+    height: 400px;
+    background-color: rgb(228, 201, 230);
+}
+#ourservice h2{
+    text-align: center;
+    margin-top: 16px;
+    padding-top: 23px;
+    font-family: 'Architects Daughter', cursive;
+    font-size: 2.5rem;
+}
+.card{
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 30%;
+    margin: 23px 25px;
+    height: 233px;
+    padding: 18px 23px;
+    font-size: 1.5rem;
+    font-family: 'Architects Daughter', cursive;
+}
+.btn{
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px 25px;
+    font-family: 'Architects Daughter', cursive;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: brown;
+}
+.btn:hover{
+    color: rgb(204, 218, 17);
+    background-color: white;
+}

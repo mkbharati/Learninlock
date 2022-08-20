@@ -1,0 +1,23 @@
+doctype html
+html 
+    head 
+        title LearnInLock 
+        block scripts
+        block style 
+         
+    body 
+        nav#navbar
+            ul 
+                div#logo 
+                    img(src="/static/logo1.png")
+                    |LearnInlock
+                li #[a(href="/home") Home]
+                li #[a(href="/class10") Class 10]
+                li #[a(href="/class12") Class 12]
+                li #[a(href="/about") About Us]
+                div 
+                    button.btns #[a(href="/") LogOut] 
+
+        block content 
+        footer#footer 
+            | Copyright © 2021 LearnInLock.com | All rights reserved

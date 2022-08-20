@@ -1,0 +1,23 @@
+doctype html
+html 
+    head 
+        title LearnInLock 
+        style 
+            include ../static/loginstyle.css
+        
+         
+    body
+        section#intro 
+            div Welcome to LearnInLock
+            div.small Eat Sleep Learn Repeat
+        section#login 
+            div#border
+                div#log
+                    h2 #[a(href="/") Login]
+                    h2 #[a(href="/register") Register]
+                form(action="/login" class="signin" method="post")
+                    <input type="email" class= "myInput" required name="email" placeholder="Enter your email.."> 
+                    <input type="password" class="name" required name= "password" placeholder="Enter your password">
+                    <button class="btnlog" type = "submit">Sign In</button>
+        footer#footer 
+                | Copyright © 2021 LearnInLock.com | All rights reserved    

@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+#intro::before{
+    content: "";
+    background: url('../static/bgimg.jpg') no-repeat center center/cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height:65%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.9;
+}
+
+#intro{
+    
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-family: 'Architects Daughter', cursive;
+    color: rgb(89, 38, 122);
+    font-weight: 800;
+}
+#login{
+    font-family: 'Architects Daughter', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    background-color: cornsilk;
+}
+#border{
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    border-radius: 5px;
+    width: 33%;
+    background-color: blanchedalmond;
+}
+#login h2 a{
+    text-decoration: none;
+    margin: 10px;
+}
+#log{
+    width:33%;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.signin{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 10px;
+}
+.signin input{
+    margin: 15px 1px;
+    width: 400px;
+    height: 35px;
+    text-align: center;
+    font-family: 'Architects Daughter', cursive;
+    border: 2px solid black;
+}
+.btnlog{
+    padding: 5px 5px;
+    background-color: white;
+    font-family: 'Architects Daughter', cursive;
+    border: 2px solid black;
+}
+#footer{
+    display: flex;
+    color: white;
+    background-color: black;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Architects Daughter', cursive;
+}
